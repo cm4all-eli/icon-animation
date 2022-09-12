@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation</title>
+</head>
+
+<style>
+
+    .wrap {
+        margin: 500px;
+        margin-bottom: 100px;
+        background-color: chartreuse;
+    }
+
+    .plus-wrap {
+        margin: 500px; 
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-color: aquamarine;
+    }
+
+    .plus-wrap-rotate {
+        margin: 500px;
+        margin-top: 100px;
+        background-color: yellow; 
+    }
+    
+    #chevron:hover {
+        animation-name: spin;
+        animation-duration: 1000ms;
+        animation-delay: 12000ms
+        animation-timing-function: ease-in-out;    
+        transform-origin: center center;    
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-name: spin; 
+        background-color:red;
+}
+  
+    #vertical:hover {
+        animation-name: spin-plus;
+        animation-duration: 1000ms;
+        animation-delay: 12000ms
+        animation-timing-function: ease-in-out;    
+        transform-origin: center center;    
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-name: spin-plus; 
+        background-color:red;
+    }
+
+    #plus-rotate:hover {
+        animation-name: rotate;
+        animation-duration: 3000ms;
+        animation-delay: 12000ms
+        animation-timing-function: ease-in-out;    
+        transform-origin: center center;    
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-name: rotate; 
+    }
+
+    @keyframes spin {
+         to { 
+                stroke-dashoffset: 400; 
+                rotate: 180deg;
+
+         }
+        
+    } 
+
+     @keyframes spin-plus{
+         to { 
+                stroke-dashoffset: 400; 
+                rotate: 90deg;
+                background-color: blue;
+
+         }
+        
+    } 
+
+
+    @keyframes rotate{
+         to { 
+                stroke-dashoffset: 400; 
+                rotate: 315deg;
+                /* background-color: blue; */
+
+         }
+        
+    } 
+
+</style>
+
+
+
+<body>
+    
+    <div class="wrap" onclick="spin">
+    
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 1417.32 1417.32" style="enable-background:new 0 0 1417.32 1417.32;" xml:space="preserve">
+        <polygon id = "chevron" points="957.7,913.2 706.88,676.75 461.19,912.87 371.9,860.77 706.21,538.7 1046.3,860.44 "/>
+        </svg>
+
+    </div>
+
+<div class="plus-wrap">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 1417.32 1417.32" style="enable-background:new 0 0 1417.32 1417.32;" xml:space="preserve">
+        <g id="horizontal">
+            <rect x="646.17" y="402.34" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 1417.3229 1.136868e-13)" class="st0" width="124.98" height="612.64"/>
+        </g>
+        <g id="vertical">
+            <rect x="646.17" y="402.34" width="124.98" height="612.64"/>
+        </g>
+        </svg>
+</div>
+
+
+
+<div class="plus-wrap-rotate">
+    <?xml version="1.0" encoding="utf-8"?>
+    <svg version="1.1" id="plus-rotate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 1417.32 1417.32" style="enable-background:new 0 0 1417.32 1417.32;" xml:space="preserve">
+    <polygon points="1014.98,646.17 771.15,646.17 771.15,402.34 646.17,402.34 646.17,646.17 402.34,646.17 402.34,771.15 
+        646.17,771.15 646.17,1014.98 771.15,1014.98 771.15,771.15 1014.98,771.15 "/>
+    </svg>
+</div>
+
+</body>
+
+</html>
+
